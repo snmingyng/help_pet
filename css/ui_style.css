@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: aliceblue;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    background-color: rgb(99, 99, 99);
+}
+header{
+    width: 100%;
+    height: 120px;
+    top: 0; left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+    background-color: #284C7E;
+}
+.logo{
+    background-image: url('../img/help_pet.png');
+    width: auto;
+    height: 120px;
+    margin: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.article_top{
+    width: 100%;
+    height: 220px;
+    vertical-align: bottom;
+    text-align: center;
+    background-color: rgb(212, 212, 212);
+}
+
+.btn_box{
+    width: auto;
+    height: 50px;
+    margin: 5px 70px 20px 20px;
+    display: inline-block;
+    user-select: none;
+    text-align: center;
+}
+
+.btn_gps {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+	background-color:#284c7e;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size:20px;
+    margin: 10px 50px;
+	padding:9px 24px;
+	text-decoration:none;
+    text-align: center;
+    
+}
+.btn_gps:hover {
+	background-color:#3b6091;
+    color: #ffffff;
+}
+.btn_gps:active {
+	position:relative;
+	top:1px;
+}
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal.show {
+    display: block;
+  }
+
+  .modal_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    padding: auto;
+
+    width: 560px;
+    height: auto;
+
+    
+
+    text-align: center;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+    transform: translateX(-50%) translateY(-50%);
+    user-select: none;
+  }
+
+  .help_title{
+    margin: 30px 10px;
+    font-family: GmarketSansMedium;
+    font-size: 36px;
+    font-weight: 800;
+    color: #284C7E;
+}
+.help_text{
+    margin: 5px 0px;
+    font-family: GmarketSansMedium;
+    font-size: 16px;
+    font-weight: lighter;
+}
+input {
+  width: 500px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  outline: none;
+  box-shadow: 0 0 0 2px #888;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+}
+/* 지도표시 */
+.article_map{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto 10px ;
+    background-color: rgb(213, 255, 171);
+}
+/* 지도 정보 표시 하단페이지 */
+.info_page{
+    width: 40%;
+    height: 600px;
+    align-items: center;
+    text-align: left;
+    overflow: hidden;
+    display: inline-block;
+    background-color: rgb(241, 241, 241);
+}
+.info_imgbox{
+    width: 59.3%;
+    height: 600px;
+    display: inline-block;
+    background-color:rgb(241, 241, 241);
+}
+.info_name{
+    margin: 50px 0px 10px 50px;
+    font-family: GmarketSansMedium;
+    font-size: 32px;
+    font-weight: 800;
+    color: #284C7E;
+}
+.info_etc{
+    margin: 5px 0px 5px 50px;
+    font-family: GmarketSansMedium;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+/* 지도 내 인포박스 */
+.wrap {
+    position: 
+    absolute;left: 0;
+    bottom: 40px;width: 
+    288px;
+    height: 
+    132px;
+    margin-left: -144px;
+    text-align: left;overflow: hidden;
+    font-size: 12px;
+    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    line-height: 1.5;
+}
+.wrap * {padding: 0;margin: 0;}
+
+.wrap .info 
+{   width: 286px;
+    height: 140px;border-radius: 5px;
+    border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;
+    overflow: hidden;background: #fff;
+}
+.wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+.info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+.info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+.info .close:hover {cursor: pointer;}
+.info .body {position: relative;overflow: hidden;}
+.info .desc {
+    position: relative;
+    margin: 13px 0 0 8px;
+    height: 75px;}
+.desc .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+.info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+.info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+.info .link {color: #5085BB;}
+
+/* 선의 거리 계산하기 */
+.dot {overflow:hidden;float:left;width:12px;height:12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/mini_circle.png');}    
+.dotOverlay {position:relative;bottom:10px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;font-size:12px;padding:5px;background:#fff;}
+.dotOverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}    
+.number {font-weight:bold;color:#ee6152;}
+.dotOverlay:after {content:'';position:absolute;margin-left:-6px;left:50%;bottom:-8px;width:11px;height:8px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white_small.png')}
+.distanceInfo {position:relative;top:5px;left:5px;list-style:none;margin:0;}
+.distanceInfo .label {display:inline-block;width:50px;}
+.distanceInfo:after {content:none;}
