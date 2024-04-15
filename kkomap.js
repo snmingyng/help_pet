@@ -134,20 +134,30 @@ btnGps.addEventListener('click', function() {
     }
 });
 
-var btnTrfOn = document.getElementById('btn-traffic-on');
-btnTrfOn.addEventListener('click', function() {
-    map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-});
+//교통정보 버튼
+    var trafficBtn = document.getElementById('btn-traffic-on');
 
-var btnTrfOff = document.getElementById('btn-traffic-off');
-btnTrfOff.addEventListener('click', function() {
-    map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-});
+    var traffic_button = (function() {
+    var isShow = true;
+
+    return function() {
+        if(isShow){
+            console.log('on')
+            map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+            isShow = !isShow
+        }else if(!isShow){
+            console.log('off')
+            map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+            isShow = !isShow
+        }
+    };
+    })();
+    trafficBtn.onclick = traffic_button;
 
 // 지도 클릭 시 열려있는 인포윈도우 닫기
-kakao.maps.event.addListener(map, 'click', function() {
-    if (openInfowindow) {
-        openInfowindow.close();
-        openInfowindow = null;
-    }
-});
+    kakao.maps.event.addListener(map, 'click', function() {
+        if (openInfowindow) {
+            openInfowindow.close();
+            openInfowindow = null;
+        }
+    });
