@@ -10,11 +10,12 @@ body {
 }
 
 .container{
-    width: 100%;
+    width: 100vw;
     height: auto;
     margin: auto;
     position: relative;
     background-color: rgb(99, 99, 99);
+    white-space: nowrap;
 }
 header{
     width: 100%;
@@ -47,12 +48,14 @@ header{
 }
 
 .btn_box{
-    width: auto;
-    height: 50px;
-    margin: 5px 70px 20px 20px;
-    display: inline-block;
+    width: inherit;
+    height: auto;
+    margin: auto;
     user-select: none;
     text-align: center;
+    display : flex;
+
+    justify-content: space-between;
 }
 
 .btn_gps {
@@ -69,7 +72,7 @@ header{
 	color:#ffffff;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size:20px;
-    margin: 10px 50px;
+    margin: 10px auto;
 	padding:9px 24px;
 	text-decoration:none;
     text-align: center;
