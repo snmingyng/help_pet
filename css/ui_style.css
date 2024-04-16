@@ -58,30 +58,43 @@ header{
     width: 40%;
     height: 600px;
     align-items: center;
-    text-align: left;
-    overflow: hidden;
+    padding: 10px;
+    overflow-y: hidden;
     display: inline-block;
     background-color: rgb(241, 241, 241);
     
 }
-.info_mapbox{
+.info_imgbox{
     width: 59.3%;
     height: 600px;
     display: inline-block;
     background-color:rgb(241, 241, 241);
 }
 .info_name{
+    height: max-content;
     margin: 50px 0px 20px 20px;
     font-family: GmarketSansMedium;
     font-size: 32px;
     font-weight: 800;
     color: #284C7E;
+
+    
+}
+.info_text_wrap{
+    width: auto;
+    height: max-content;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    word-break: break-all;
 }
 .info_etc{
-    width: inherit;
-    margin: 5px 0px 0px 10px;
+    width: auto;
+    height: auto;
+    margin: auto auto auto 5px;
     font-family: GmarketSansMedium;
     font-size: 24px;
     font-weight: lighter;
-    display: block;
+    word-break: break-all;
 }
