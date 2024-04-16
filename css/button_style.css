@@ -1,0 +1,39 @@
+.btn_box{
+    width: inherit;
+    height: auto;
+    margin: auto;
+    user-select: none;
+    text-align: center;
+    display : flex;
+
+    justify-content: space-between;
+}
+
+.btn_gps {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+	background-color:#284c7e;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size:20px;
+    margin: 10px auto;
+	padding:9px 24px;
+	text-decoration:none;
+    text-align: center;
+    
+}
+.btn_gps:hover {
+	background-color:#3b6091;
+    color: #ffffff;
+}
+.btn_gps:active {
+	position:relative;
+	top:1px;
+}
